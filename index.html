@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <style>
+    body{
+        background-image: url("https://images-na.ssl-images-amazon.com/images/I/81AogETaaHL._SY450_.jpg");
+    }
+
+    .painting{
+        border: solid 10px;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 687px;
+    }
+
+    .flex{
+        display: flex;
+        justify-content: space-around;
+    }
+  </style>
+ </head>
+ <body onload="start();">
+  <div class="container">
+    <h1>Deface the painting!</h1>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <canvas class="painting" id="canvas" width="687" height="700"></canvas>
+    <br>
+    <div class = "flex">
+
+         <button id="moustache">Draw a moustache!</button>
+         <button id="clear">Clear</button>
+    </div>
+  </div>
+ </body>
+ <script src="index.js"></script>
+</html>
