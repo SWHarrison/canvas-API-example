@@ -32,6 +32,8 @@ moustache = document.getElementById('moustache')
 clear = document.getElementById('clear')
 
 moustache.addEventListener("click" ,function(){
+    ctx.strokeStyle = $('#selColor').val();
+    ctx.lineWidth = $('#selWidth').val();
     ctx.beginPath();
     ctx.moveTo(264, 300);
     ctx.lineTo(304, 310);
@@ -42,8 +44,8 @@ moustache.addEventListener("click" ,function(){
 function Draw(x, y, isDown) {
     if (isDown) {
         ctx.beginPath();
-        //ctx.strokeStyle = $('#selColor').val();
-        //ctx.lineWidth = $('#selWidth').val();
+        ctx.strokeStyle = $('#selColor').val();
+        ctx.lineWidth = $('#selWidth').val();
         ctx.lineJoin = "round";
         ctx.moveTo(lastX, lastY);
         ctx.lineTo(x, y);
